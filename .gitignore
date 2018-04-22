@@ -1,5 +1,6 @@
 node_modules/
 documentation/
+dist/
 .vscode/
 .DS_Store
 e2e/
