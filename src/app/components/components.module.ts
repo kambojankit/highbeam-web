@@ -13,6 +13,7 @@ import { TestimonialsComponent } from './testimonials/testimonials.component';
 import { ComponentsComponent } from './components.component';
 import { ServiceComponent } from './service/service.component';
 import { HospitalityComponent } from './hospitality/hospitality.component';
+import { BookingComponent } from './booking/booking.component';
 
 @NgModule({
     imports: [
@@ -30,8 +31,9 @@ import { HospitalityComponent } from './hospitality/hospitality.component';
         FaqComponent,
         TestimonialsComponent,
         ServiceComponent,
-        HospitalityComponent
+        HospitalityComponent,
+        BookingComponent
     ],
-    exports:[ ComponentsComponent ]
+    exports:[ ComponentsComponent, BookingComponent ]
 })
 export class ComponentsModule { }

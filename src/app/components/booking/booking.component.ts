@@ -2,10 +2,10 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-login',
-  templateUrl: './login.component.html',
-  styleUrls: ['./login.component.scss']
+  templateUrl: './booking.component.html',
+  styleUrls: ['./booking.component.scss']
 })
-export class LoginComponent implements OnInit {
+export class BookingComponent implements OnInit {
 
     data : Date = new Date();
     focus;
