@@ -8,6 +8,8 @@ import { ComponentsModule } from './components/components.module';
 
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './shared/navbar/navbar.component';
+import { AppRoutes } from './app.routing.module';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
     declarations: [
@@ -18,9 +20,10 @@ import { NavbarComponent } from './shared/navbar/navbar.component';
         BrowserAnimationsModule,
         NgbModule.forRoot(),
         FormsModule,
-        RouterModule,
+        RouterModule.forRoot(AppRoutes),
         AppRoutingModule,
-        ComponentsModule
+        ComponentsModule,
+        HttpClientModule
     ],
     providers: [],
     bootstrap: [AppComponent]

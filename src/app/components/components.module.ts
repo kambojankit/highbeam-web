@@ -14,6 +14,9 @@ import { ComponentsComponent } from './components.component';
 import { ServiceComponent } from './service/service.component';
 import { HospitalityComponent } from './hospitality/hospitality.component';
 import { BookingComponent } from './booking/booking.component';
+import { UpcomingEventsComponent } from './upcoming-events/upcoming-events.component';
+import { CalendarModule } from 'angular-calendar';
+import { UpcomingEventsService } from './upcoming-events/upcoming-events.service';
 
 @NgModule({
     imports: [
@@ -22,7 +25,8 @@ import { BookingComponent } from './booking/booking.component';
         NgbModule,
         NouisliderModule,
         RouterModule,
-        JWBootstrapSwitchModule
+        JWBootstrapSwitchModule,
+        CalendarModule.forRoot()
       ],
     declarations: [
         ComponentsComponent,
@@ -32,8 +36,10 @@ import { BookingComponent } from './booking/booking.component';
         TestimonialsComponent,
         ServiceComponent,
         HospitalityComponent,
-        BookingComponent
+        BookingComponent,
+        UpcomingEventsComponent
     ],
-    exports:[ ComponentsComponent, BookingComponent ]
+    providers: [UpcomingEventsService],
+    exports: [ ComponentsComponent, BookingComponent ]
 })
 export class ComponentsModule { }
