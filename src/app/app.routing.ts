@@ -24,6 +24,10 @@ const routes: Routes = [
   {
     path: 'booknow',
     component: BookingComponent
+  },
+  {
+    path: 'booknow/:planId',
+    component: BookingComponent
   }
 ];
 
