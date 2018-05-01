@@ -8,7 +8,6 @@ import { ComponentsModule } from './components/components.module';
 
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './shared/navbar/navbar.component';
-import { AppRoutes } from './app.routing.module';
 import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
@@ -20,7 +19,7 @@ import { HttpClientModule } from '@angular/common/http';
         BrowserAnimationsModule,
         NgbModule.forRoot(),
         FormsModule,
-        RouterModule.forRoot(AppRoutes),
+        RouterModule,
         AppRoutingModule,
         ComponentsModule,
         HttpClientModule
