@@ -1,0 +1,127 @@
+<div class="modal-header">
+    Book Event
+</div>
+<div class="modal-body" [formGroup]="eventForm">
+    <fieldset [style.display]="step === 'choose-event' ? 'block' : 'none'">
+        <div class="row">
+            <div class="col-lg-4 col-md-4 col-sm-4">
+                <label>
+                    <input type="radio" formControlName="type" value="birthday">
+                    <img src="https://www.sloshout.com/images/birthday.png" alt="Birthday Party">
+                    <p>Birthday Party</p>
+                </label>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-4">
+                <label>
+                    <input type="radio" formControlName="type" value="corporate">
+                    <img src="https://www.sloshout.com/images/corporate.png" alt="Corporate Party">
+                    <p>Corporate Party</p>
+                </label>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-4">
+                <label>
+                    <input type="radio" formControlName="type" value="family function">
+                    <img src="https://www.sloshout.com/images/family.png" alt="Family Function">
+                    <p>Family Function</p>
+                </label>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-4">
+                <label>
+                    <input type="radio" formControlName="type" value="friends get together">
+                    <img src="https://www.sloshout.com/images/friends.png" alt="Corporate Get Together">
+                    <p>Get Together</p>
+                </label>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-4">
+                <label>
+                    <input type="radio" formControlName="type" value="house party">
+                    <img src="https://www.sloshout.com/images/house.png" alt="House Party">
+                    <p>House Party</p>
+                </label>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-4">
+                <label>
+                    <input type="radio" formControlName="type" value="others">
+                    <img src="https://www.sloshout.com/images/other.png" alt="Other Occassions">
+                    <p>Others</p>
+                </label>
+            </div>
+        </div>
+        <button class="btn btn-primary next" (click)="step = 'event-detail'">Next</button>
+    </fieldset>
+    <fieldset [style.display]="step === 'event-detail' ? 'block' : 'none'">
+        <div class="row">
+            <div class="col-md-12 col-sm-12">
+                <div class="text-center">
+                    <div class="donate">
+                        <label class="">
+                            <input type="radio" formControlName="guestCount" value="0 - 10">
+                            <span>0 - 10</span>
+                        </label>
+                        <label class="">
+                            <input type="radio" formControlName="guestCount" value="10 - 20">
+                            <span>10 - 20</span>
+                        </label>
+                        <label class="">
+                            <input type="radio" formControlName="guestCount" value="20 - 50">
+                            <span>20 - 50</span>
+                        </label>
+                        <br>
+                        <label class="">
+                            <input type="radio" formControlName="guestCount" value="50 - 100">
+                            <span>50 - 100</span>
+                        </label>
+                        <label class="">
+                            <input type="radio" formControlName="guestCount" value="100 - 200">
+                            <span>100 - 200</span>
+                        </label>
+                        <label class="">
+                            <input type="radio" formControlName="guestCount" value="200+">
+                            <span>200+</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 col-sm-12">
+                <div class="text-center">
+                    <div class="donate">
+                        <select class="form-control w-50" formControlName="location">
+                            <option value="Delhi"> Delhi</option>
+                            <option value="Gurgaon"> Gurgaon</option>
+                            <option value="Noida"> Noida</option>
+                            <option value="Faridabad"> Faridabad</option>
+                            <option value="Ghaziabad"> Ghaziabad</option>
+                            <option value="Mumbai"> Mumbai</option>
+                            <option value="Bangalore"> Bangalore</option>
+                            <option value="Chandigarh"> Chandigarh</option>
+                            <option value="Pune"> Pune</option>
+                            <option value="Kolkata"> Kolkata</option>
+                            <option value="Jaipur"> Jaipur</option>
+                            <option value="Lucknow"> Lucknow</option>
+                            <option value="Chennai"> Chennai</option>
+                            <option value="Hyderabad"> Hyderabad</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div style="padding-top: 7px;">
+            <p class="text-center" style="padding-bottom:15px;">
+                <input type="text" formControlName="date" autocomplete="off" class="form-control w-50" placeholder="Select Date" ngbDatepicker #d="ngbDatepicker">
+            </p>
+        </div>
+        <button class="btn previous" (click)="step = 'choose-event'">Prev</button>
+        <button class="btn btn-primary next" (click)="step = 'user-detail'">Next</button>
+    </fieldset>
+    <fieldset [style.display]="step === 'user-detail' ? 'block' : 'none'">
+        <div class="personal-details">
+            <input class="form-control" formControlName="name" type="text" placeholder="Name" tabindex="15">
+            <input class="form-control" formControlName="phone" type="text" pattern="[1-9]{1}[0-9]{9}" placeholder="Phone" tabindex="16">
+            <input class="form-control" formControlName="email" type="email" placeholder="Email" tabindex="17">
+        </div>
+        <button class="btn previous" (click)="step = 'event-detail'">Prev</button>
+        <button class="btn btn-primary next" (click)="done()">Submit</button>
+    </fieldset>
+</div>

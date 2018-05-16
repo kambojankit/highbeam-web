@@ -24,7 +24,7 @@
                         <li class="text-bold">In house catering</li>
                         <li class="text-bold">In house Event managment</li>
                     </ul>
-                    <button class="btn btn-primary" [routerLink]="['/booknow/gold']">Choose plan</button>
+                    <button class="btn btn-primary" (click)="bookEvent('gold')">Choose plan</button>
                 </div>
             </div>
             <div class="card">
@@ -48,7 +48,7 @@
                         <li>500+ Members</li>
                         <li class="text-bold">In house catering</li>
                     </ul>
-                    <button class="btn btn-primary" [routerLink]="['/booknow/silver']">Choose plan</button>
+                    <button class="btn btn-primary" (click)="bookEvent('silver')">Choose plan</button>
                 </div>
             </div>
             <div class="card">
@@ -71,7 +71,7 @@
                         <li>Secure space</li>
                         <li>500+ Members</li>
                     </ul>
-                    <button class="btn btn-primary" [routerLink]="['/booknow/bronze']">Choose plan</button>
+                    <button class="btn btn-primary" (click)="bookEvent('bronze')">Choose plan</button>
                 </div>
             </div>
         </div>
