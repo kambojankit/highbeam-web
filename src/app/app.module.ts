@@ -5,6 +5,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { RouterModule } from '@angular/router';
 import { AppRoutingModule } from './app.routing';
 import { ComponentsModule } from './components/components.module';
+import { LightboxModule } from 'angular2-lightbox';
 
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './shared/navbar/navbar.component';
@@ -22,7 +23,8 @@ import { HttpClientModule } from '@angular/common/http';
         RouterModule,
         AppRoutingModule,
         ComponentsModule,
-        HttpClientModule
+        HttpClientModule,
+        LightboxModule
     ],
     providers: [],
     bootstrap: [AppComponent]

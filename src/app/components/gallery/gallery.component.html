@@ -2,4 +2,12 @@
     <div class="container">
         <h3 class="title">Gallery</h3>
     </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-4 col-md-4 col-lg-4" *ngFor="let item of imagesGroup" (click)="imageClick(item.click)">
+                <img [src]="item.src" class="galleryImg" />
+                <div class="galleryText">{{item.imageText}}</div>
+            </div>
+        </div>
+    </div>
 </div>

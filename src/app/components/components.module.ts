@@ -17,6 +17,7 @@ import { BookingComponent } from './booking/booking.component';
 import { UpcomingEventsComponent } from './upcoming-events/upcoming-events.component';
 import { CalendarModule } from 'angular-calendar';
 import { UpcomingEventsService } from './upcoming-events/upcoming-events.service';
+import { ImageComponent } from './image/image.component';
 
 @NgModule({
     imports: [
@@ -37,7 +38,8 @@ import { UpcomingEventsService } from './upcoming-events/upcoming-events.service
         ServiceComponent,
         HospitalityComponent,
         BookingComponent,
-        UpcomingEventsComponent
+        UpcomingEventsComponent,
+        ImageComponent
     ],
     providers: [UpcomingEventsService],
     exports: [ ComponentsComponent, BookingComponent ]

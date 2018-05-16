@@ -6,6 +6,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { ComponentsComponent } from './components/components.component';
 import { BookingComponent } from './components/booking/booking.component';
 import { TestimonialsComponent } from './components/testimonials/testimonials.component';
+import { ImageComponent } from './components/image/image.component';
 
 const routes: Routes = [
   {
@@ -28,6 +29,10 @@ const routes: Routes = [
   {
     path: 'booknow/:planId',
     component: BookingComponent
+  },
+  {
+    path: 'gallery/:image',
+    component: ImageComponent
   }
 ];
 
