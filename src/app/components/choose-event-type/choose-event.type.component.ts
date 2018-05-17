@@ -8,10 +8,10 @@ import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 })
 
 export class ChooseEventTypeComponent implements OnInit {
-    private eventForm: FormGroup;
-    private step = 'choose-event';
+    public eventForm: FormGroup;
+    public step = 'choose-event';
     @Input()
-    private plan: string;
+    public plan: string;
     constructor(private _fb: FormBuilder, private activeModal: NgbActiveModal) { }
 
     ngOnInit() {
