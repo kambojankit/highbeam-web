@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NouisliderModule } from 'ng2-nouislider';
 import { JWBootstrapSwitchModule } from 'jw-bootstrap-switch-ng2';
 import { RouterModule } from '@angular/router';
@@ -17,11 +17,14 @@ import { BookingComponent } from './booking/booking.component';
 import { UpcomingEventsComponent } from './upcoming-events/upcoming-events.component';
 import { CalendarModule } from 'angular-calendar';
 import { UpcomingEventsService } from './upcoming-events/upcoming-events.service';
+import { ImageComponent } from './image/image.component';
+import { ChooseEventTypeComponent } from './choose-event-type/choose-event.type.component';
 
 @NgModule({
     imports: [
         CommonModule,
         FormsModule,
+        ReactiveFormsModule,
         NgbModule,
         NouisliderModule,
         RouterModule,
@@ -37,7 +40,12 @@ import { UpcomingEventsService } from './upcoming-events/upcoming-events.service
         ServiceComponent,
         HospitalityComponent,
         BookingComponent,
-        UpcomingEventsComponent
+        UpcomingEventsComponent,
+        ImageComponent,
+        ChooseEventTypeComponent
+    ],
+    entryComponents: [
+        ChooseEventTypeComponent
     ],
     providers: [UpcomingEventsService],
     exports: [ ComponentsComponent, BookingComponent ]

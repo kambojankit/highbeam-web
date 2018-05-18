@@ -1,0 +1,15 @@
+#gallery {
+    .galleryImg {
+        height: 80%;
+        width: 100%;
+        cursor: pointer;
+    }
+    .galleryText {
+        height: 30px;
+        padding: 5px;
+        align-items: center;
+        text-align: center;
+        background-color: #eee;
+        cursor: pointer;
+    }
+}
