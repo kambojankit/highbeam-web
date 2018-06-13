@@ -1,79 +1,111 @@
-<div class="section section-service" id="service">
-    <div class="container">
-        <h3 class="title">Service</h3>
-        <div class="card-group pricing">
-            <div class="card">
-                <div class="card-header">
-                    <div class="card-header-text">
-                        <div class="card-title">Gold</div>
-                    </div>
-                </div>
-                <div class="card-body">
-                    <h1>
-                        <span class="plan-price text-primary">
-                        <span class="plan-price-symbol">$</span>
-                        <span>1000</span>
-                        <span class="plan-price-period">/ day</span>
-                        </span>
-                    </h1>
-                    <ul class="plan-features">
-                        <li>Spacious Area</li>
-                        <li>Mesmerizing View</li>
-                        <li>Secure space</li>
-                        <li>500+ Members</li>
-                        <li class="text-bold">In house catering</li>
-                        <li class="text-bold">In house Event managment</li>
-                    </ul>
-                    <button class="btn btn-primary" (click)="bookEvent('gold')">Choose plan</button>
-                </div>
+<div class="wrapper">
+    <div class="page-header page-header-small">
+        <div class="page-header-image rellax-header" data-rellax-speed="-8"
+             style="background-image: url('assets/img/bg6.jpg');">
+        </div>
+        <div class="container">
+            <div class="content-center">
+                <h1 class="title">Rate & Services</h1>
             </div>
-            <div class="card">
-                <div class="card-header">
-                    <div class="card-header-text">
-                        <div class="card-title">Silver</div>
+        </div>
+    </div>
+    <div class="section section-contact-us text-center">
+        <div class="container">
+            <h2 class="title">Submit details to get a quote!</h2>
+            <p class="description">Your project is very important to us.</p>
+            <div class="row">
+                <div class="col-lg-6 text-center col-md-8 ml-auto mr-auto">
+                    <div class="input-group input-lg" [ngClass]="{'input-group-focus':focus===true}">
+                        <div class="input-group-prepend">
+                              <span class="input-group-text">
+                                  <i class="now-ui-icons users_circle-08"></i>
+                              </span>
+                        </div>
+                        <input type="text" class="form-control" placeholder="Contact Name"
+                               (focus)="focus=true" (blur)="focus=false">
                     </div>
-                </div>
-                <div class="card-body">
-                    <h1>
-                        <span class="plan-price text-primary">
-                  <span class="plan-price-symbol">$</span>
-                        <span>600</span>
-                        <span class="plan-price-period">/ month</span>
-                        </span>
-                    </h1>
-                    <ul class="plan-features">
-                        <li>Spacious Area</li>
-                        <li>Mesmerizing View</li>
-                        <li>Secure space</li>
-                        <li>500+ Members</li>
-                        <li class="text-bold">In house catering</li>
-                    </ul>
-                    <button class="btn btn-primary" (click)="bookEvent('silver')">Choose plan</button>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-header">
-                    <div class="card-header-text">
-                        <div class="card-title">Silver</div>
+                    <div class="input-group input-lg" [ngClass]="{'input-group-focus':focus1===true}">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">
+                                <i class="now-ui-icons ui-1_email-85"></i>
+                            </span>
+                        </div>
+                        <input type="text" class="form-control" placeholder="Email Id"
+                               (focus)="focus1=true" (blur)="focus1=false">
                     </div>
-                </div>
-                <div class="card-body">
-                    <h1>
-                        <span class="plan-price text-primary">
-                  <span class="plan-price-symbol">$</span>
-                        <span>300</span>
-                        <span class="plan-price-period">/ month</span>
-                        </span>
-                    </h1>
-                    <ul class="plan-features">
-                        <li>Spacious Area</li>
-                        <li>Mesmerizing View</li>
-                        <li>Secure space</li>
-                        <li>500+ Members</li>
-                    </ul>
-                    <button class="btn btn-primary" (click)="bookEvent('bronze')">Choose plan</button>
+                    <div class="input-group input-lg">
+                        <div class="input-group-prepend">
+                              <span class="input-group-text">
+                                  <i class="now-ui-icons tech_mobile"></i>
+                              </span>
+                        </div>
+                        <input type="text" class="form-control" placeholder="Mobile Number">
+                    </div>
+
+                    <div class="input-group input-lg">
+                        <div class="input-group-prepend">
+                              <span class="input-group-text">
+                                  <i class="now-ui-icons clothes_tie-bow"></i>
+                              </span>
+                        </div>
+                        <input type="text" class="form-control" placeholder="Promotional Name Of Event">
+                    </div>
+
+                    <div class="input-group input-lg">
+                        <div class="input-group-prepend">
+                              <span class="input-group-text">
+                                  <i class="now-ui-icons ui-1_calendar-60"></i>
+                              </span>
+                        </div>
+                        <input type="text" class="form-control" placeholder="Preferred Date">
+                    </div>
+
+                    <div class="input-group input-lg">
+                        <div class="input-group-prepend">
+                              <span class="input-group-text">
+                                  <i class="now-ui-icons tech_watch-time"></i>
+                              </span>
+                        </div>
+                        <input type="text" class="form-control" placeholder="Start time">
+                    </div>
+
+                    <div class="input-group input-lg">
+                        <div class="input-group-prepend">
+                              <span class="input-group-text">
+                                  <i class="now-ui-icons tech_watch-time"></i>
+                              </span>
+                        </div>
+                        <input type="text" class="form-control" placeholder="End time">
+                    </div>
+
+                    <div class="input-group input-lg">
+                        <div class="input-group-prepend">
+                              <span class="input-group-text">
+                                  <i class="now-ui-icons transportation_bus-front-12"></i>
+                              </span>
+                        </div>
+                        <input type="text" class="form-control" placeholder="Number Of Guests">
+                    </div>
+
+                    <div class="input-group input-lg">
+                        <div class="input-group-prepend">
+                              <span class="input-group-text">
+                                  <i class="now-ui-icons tech_controller-modern"></i>
+                              </span>
+                        </div>
+                        <input type="text" class="form-control" placeholder="Event Type">
+                    </div>
+
+                    <div class="textarea-container">
+                        <textarea class="form-control" name="name" rows="4" cols="80"
+                                  placeholder="Brief description of the event..."></textarea>
+                    </div>
+                    <div class="send-button">
+                        <a href="#pablo" class="btn btn-primary btn-round btn-block btn-lg">Get Quote</a>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+
 </div>

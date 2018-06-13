@@ -1,0 +1,104 @@
+.description {
+  color: #000;
+}
+
+.owl-carousel.owl-loaded {
+  display: block;
+}
+
+.owl-carousel {
+  display: none;
+  width: 100%;
+  -webkit-tap-highlight-color: transparent;
+  position: relative;
+  z-index: 1;
+}
+
+.our-hospitality-section {
+  color: #454545;
+  position: relative;
+  padding-bottom: 75px;
+}
+.owl-carousel .owl-stage-outer {
+  position: relative;
+  overflow: hidden;
+  -webkit-transform: translate3d(0px, 0px, 0px);
+}
+
+.owl-carousel {
+  display: none;
+  width: 100%;
+  -webkit-tap-highlight-color: transparent;
+  position: relative;
+  z-index: 1;
+}
+
+.owl-theme .owl-controls {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.owl-carousel .owl-item {
+  position: relative;
+  min-height: 1px;
+  float: left;
+  width: 25%;
+  margin-top: 4%;
+  margin-right: 2%;
+  margin-left:6%;
+
+  -webkit-backface-visibility: hidden;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.aravira-hospitality .item div {
+  display: block;
+}
+
+.item .item-thumb, .item div {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.single-hospitality {
+  background-color: rgba(97, 94, 90, 0.19);
+  border: 1px solid #5a5a5a;
+  padding: 30px 15px 30px;
+  text-align: center;
+  min-height: 255px;
+}
+
+.box-radius {
+  border-radius: 7px;
+}
+
+.aravira-hospitality .item div {
+  display: block;
+}
+
+.single-hospitality .icon {
+  display: block;
+  min-height: 52px;
+}
+
+.single-hospitality h3 {
+  color: white;
+  font-family: "Poppins", sans-serif;
+  font-size: 21px;
+  font-weight: bold;
+  line-height: 30px;
+  text-transform: capitalize;
+  margin: 15px 0;
+  letter-spacing: 0.015em;
+}
+
+.single-hospitality p {
+  margin-bottom: 0;
+  color: #e6faff;
+  font-size: 14px;
+}

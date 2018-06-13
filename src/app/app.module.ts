@@ -10,11 +10,13 @@ import { LightboxModule } from 'angular2-lightbox';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './shared/navbar/navbar.component';
 import { HttpClientModule } from '@angular/common/http';
+import {FooterComponent} from "./shared/footer/footer.component";
 
 @NgModule({
     declarations: [
         AppComponent,
-        NavbarComponent
+        NavbarComponent,
+        FooterComponent
     ],
     imports: [
         BrowserAnimationsModule,

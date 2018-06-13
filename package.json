@@ -41,6 +41,7 @@
     "jquery": "3.2.1",
     "jw-bootstrap-switch-ng2": "1.0.10",
     "ng2-nouislider": "1.7.7",
+    "ng2-page-scroll": "^4.0.0-beta.12",
     "nouislider": "9.2.0",
     "path": "^0.12.7",
     "popper.js": "1.12.9",

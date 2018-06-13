@@ -19,6 +19,15 @@ import { CalendarModule } from 'angular-calendar';
 import { UpcomingEventsService } from './upcoming-events/upcoming-events.service';
 import { ImageComponent } from './image/image.component';
 import { ChooseEventTypeComponent } from './choose-event-type/choose-event.type.component';
+import {Ng2PageScrollModule} from "ng2-page-scroll";
+import {WeddingsComponent} from "./events/weddings/weddings.component";
+import {ArtComponent} from "./events/Art/art.component";
+import {ColComponent} from "./events/celeberation-of-life/col.component";
+import {CorporateComponent} from "./events/corporate/corporate.component";
+import {MeetingsComponent} from "./events/meetings/meetings.component";
+import {MusicComponent} from "./events/Music/music.component";
+import {OthersComponent} from "./events/others/others.component";
+import {ContactComponent} from "./contact/contact.component";
 
 @NgModule({
     imports: [
@@ -29,9 +38,18 @@ import { ChooseEventTypeComponent } from './choose-event-type/choose-event.type.
         NouisliderModule,
         RouterModule,
         JWBootstrapSwitchModule,
+        Ng2PageScrollModule,
         CalendarModule.forRoot()
       ],
     declarations: [
+        ArtComponent,
+        ContactComponent,
+        ColComponent,
+        CorporateComponent,
+        MeetingsComponent,
+        MusicComponent,
+        OthersComponent,
+        WeddingsComponent,
         ComponentsComponent,
         AboutComponent,
         GalleryComponent,

@@ -1,0 +1,57 @@
+<div class="wrapper">
+    <div class="page-header page-header-small">
+        <div class="page-header-image rellax-header" data-rellax-speed="-8"
+             style="background-image: url('assets/img/bg6.jpg');">
+        </div>
+        <div class="container">
+            <div class="content-center">
+                <h1 class="title">Arts</h1>
+
+            </div>
+        </div>
+    </div>
+    <div class="section section-about-us">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 ml-auto mr-auto text-center">
+                    <h2 class="title">Art</h2>
+                    <h5 class="description">For those who are looking for an ideal venue to make life-time memories,
+                        High Beam Dreams is the perfect unique venue for them. We make efforts to customize your event
+                        and make your special day truly memorable. The venue is located in lower Gibsons and closer to
+                        the beach and Marina which will serve as a perfect location for photography too.
+                        It has a capacity of 100 guests for wedding style seating with round tables and chairs and 150
+                        guests in concert style setting
+                    </h5>
+                </div>
+            </div>
+            <div class="separator separator-primary"></div>
+        </div>
+    </div>
+    <div class="section section-team text-center">
+        <div class="container">
+            <ngb-carousel *ngIf="images">
+                <ng-template ngbSlide>
+                    <img [src]="images[0]" alt="Random first slide">
+                    <div class="carousel-caption">
+                        <h3>First slide label</h3>
+                        <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                    </div>
+                </ng-template>
+                <ng-template ngbSlide>
+                    <img [src]="images[1]" alt="Random second slide">
+                    <div class="carousel-caption">
+                        <h3>Second slide label</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+                </ng-template>
+                <ng-template ngbSlide>
+                    <img [src]="images[2]" alt="Random third slide">
+                    <div class="carousel-caption">
+                        <h3>Third slide label</h3>
+                        <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+                    </div>
+                </ng-template>
+            </ngb-carousel>
+        </div>
+    </div>
+</div>
