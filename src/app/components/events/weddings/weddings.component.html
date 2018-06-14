@@ -1,11 +1,11 @@
 <div class="wrapper">
     <div class="page-header page-header-small">
         <div class="page-header-image rellax-header" data-rellax-speed="-8"
-             style="background-image: url('assets/img/bg6.jpg');">
+             style="background-image: url('assets/img/church/headers/wedding-2.jpeg');">
         </div>
         <div class="container">
             <div class="content-center">
-                <h1 class="title">Plan with us!</h1>
+                <!--<h1 class="title">Plan with us!</h1>-->
 
             </div>
         </div>
@@ -30,26 +30,8 @@
     <div class="section section-team text-center">
         <div class="container">
             <ngb-carousel *ngIf="images">
-                <ng-template ngbSlide>
-                    <img [src]="images[0]" alt="Random first slide">
-                    <div class="carousel-caption">
-                        <h3>First slide label</h3>
-                        <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-                    </div>
-                </ng-template>
-                <ng-template ngbSlide>
-                    <img [src]="images[1]" alt="Random second slide">
-                    <div class="carousel-caption">
-                        <h3>Second slide label</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                    </div>
-                </ng-template>
-                <ng-template ngbSlide>
-                    <img [src]="images[2]" alt="Random third slide">
-                    <div class="carousel-caption">
-                        <h3>Third slide label</h3>
-                        <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-                    </div>
+                <ng-template ngbSlide *ngFor="let image of images">
+                    <img [src]="image" alt="Random first slide">
                 </ng-template>
             </ngb-carousel>
         </div>

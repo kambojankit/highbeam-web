@@ -24,6 +24,7 @@ export class UpcomingEventsService {
         const path = 'http://www.json-generator.com/api/json/get/cfRZxLvBrC?indent=2';
         return this.httpClient.get(path)
             .map((events: CalendarEvent[]) => events)
+            .filter(e => false)
             .flatMap((event) => event);
     }
 }

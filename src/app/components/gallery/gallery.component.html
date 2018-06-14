@@ -5,7 +5,7 @@
         </div>
         <div class="container">
             <div class="content-center">
-                <h1 class="title">Gallery</h1>
+                <!--<h1 class="title">Gallery</h1>-->
 
             </div>
         </div>
@@ -16,8 +16,7 @@
         </div>
         <div class="container">
             <div class="row">
-                <div class="col-sm-4 col-md-4 col-lg-4" *ngFor="let item of imagesGroup"
-                     [routerLink]="['/gallery/'+item.click]">
+                <div class="col-sm-4 col-md-4 col-lg-4" *ngFor="let item of imagesGroup">
                     <img [src]="item.src" class="galleryImg"/>
                     <div class="galleryText">{{item.imageText}}</div>
                 </div>

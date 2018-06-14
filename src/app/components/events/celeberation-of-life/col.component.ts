@@ -13,19 +13,19 @@ export class ColComponent implements OnInit {
     focus1;
 
     ngOnInit() {
-        this.images = ['assets/img/bg1.jpg', 'assets/img/bg2.jpg', 'assets/img/bg3.jpg'];
+        this.images = ['assets/img/events/col/1.jpeg', 'assets/img/events/col/2.jpeg'];
 
         var rellaxHeader = new Rellax('.rellax-header');
 
         var body = document.getElementsByTagName('body')[0];
         body.classList.add('landing-page');
         var navbar = document.getElementsByTagName('nav')[0];
-        navbar.classList.add('navbar-transparent');
+        // navbar.classList.add('navbar-transparent');
     }
     ngOnDestroy(){
         var body = document.getElementsByTagName('body')[0];
         body.classList.remove('landing-page');
         var navbar = document.getElementsByTagName('nav')[0];
-        navbar.classList.remove('navbar-transparent');
+        // navbar.classList.remove('navbar-transparent');
     }
 }

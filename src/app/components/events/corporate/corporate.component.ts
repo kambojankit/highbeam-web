@@ -13,19 +13,19 @@ export class CorporateComponent implements OnInit {
     focus1;
 
     ngOnInit() {
-        this.images = ['assets/img/bg1.jpg', 'assets/img/bg2.jpg', 'assets/img/bg3.jpg'];
+        this.images = ['assets/img/events/corporate/5.jpeg', 'assets/img/events/corporate/6.jpeg', 'assets/img/events/corporate/7.jpeg'];
 
         var rellaxHeader = new Rellax('.rellax-header');
 
         var body = document.getElementsByTagName('body')[0];
         body.classList.add('landing-page');
         var navbar = document.getElementsByTagName('nav')[0];
-        navbar.classList.add('navbar-transparent');
+        // navbar.classList.add('navbar-transparent');
     }
     ngOnDestroy(){
         var body = document.getElementsByTagName('body')[0];
         body.classList.remove('landing-page');
         var navbar = document.getElementsByTagName('nav')[0];
-        navbar.classList.remove('navbar-transparent');
+        // navbar.classList.remove('navbar-transparent');
     }
 }
