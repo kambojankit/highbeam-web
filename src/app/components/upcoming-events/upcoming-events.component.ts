@@ -70,45 +70,42 @@ export class UpcomingEventsComponent implements OnInit {
 
     events: CalendarEvent[] = [
         {
-                start: new Date("2018-06-16"),
-                end: addDays(new Date("2018-06-16"), 0),
-                title: 'Music Concert',
-                color: colors.red
-            }
+            start: new Date("2018-06-16"),
+            end: addDays(new Date("2018-06-16"), 0),
+            title: 'Music Concert',
+            color: colors.red
+        },
+        {
+            start: new Date("2018-07-20"),
+            end: addDays(new Date("2018-06-22"), 0),
+            title: 'Wedding Reception [Private Event]',
+            color: colors.red
+        },
+        {
+            start: new Date("2018-08-03"),
+            end: addDays(new Date("2018-08-04"), 0),
+            title: 'Vancouver International Mountain Film Festival',
+            color: colors.red
+        },
+        {
+            start: new Date("2018-08-31"),
+            end: addDays(new Date("2018-09-02"), 0),
+            title: 'Wedding Reception [Private Event]',
+            color: colors.red
+        },
+        {
+            start: new Date("2018-09-07"),
+            end: addDays(new Date("2018-09-07"), 0),
+            title: 'Birthday Party [Private Event]',
+            color: colors.red
+        },
+        {
+            start: new Date("2018-09-08"),
+            end: addDays(new Date("2018-09-08"), 0),
+            title: 'Music Concert [Details to be announced]',
+            color: colors.red
+        }
     ];
-    //     [
-    //     {
-    //         start: subDays(startOfDay(new Date()), 1),
-    //         end: addDays(new Date(), 1),
-    //         title: 'A 3 day event',
-    //         color: colors.red,
-    //         actions: this.actions
-    //     },
-    //     {
-    //         start: startOfDay(new Date()),
-    //         title: 'An event with no end date',
-    //         color: colors.yellow,
-    //         actions: this.actions
-    //     },
-    //     {
-    //         start: subDays(endOfMonth(new Date()), 3),
-    //         end: addDays(endOfMonth(new Date()), 3),
-    //         title: 'A long event that spans 2 months',
-    //         color: colors.blue
-    //     },
-    //     {
-    //         start: addHours(startOfDay(new Date()), 2),
-    //         end: new Date(),
-    //         title: 'A draggable and resizable event',
-    //         color: colors.yellow,
-    //         actions: this.actions,
-    //         resizable: {
-    //             beforeStart: true,
-    //             afterEnd: true
-    //         },
-    //         draggable: true
-    //     }
-    // ];
 
     activeDayIsOpen = true;
 
