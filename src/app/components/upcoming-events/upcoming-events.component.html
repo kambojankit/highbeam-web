@@ -47,9 +47,16 @@
                 </div>
             </div>
             <br>
+            <ng-template #customCellTemplate let-day="day" let-event="event" let-locale="locale">
+                <div class="cal-cell-top">
+                    <span class="cal-day-badge" *ngIf="day.badgeTotal > 0">{{ day.badgeTotal }}</span>
+                    <span class="cal-day-number">{{ day.date | calendarDate:'monthViewDayNumber':locale }}</span>
+                </div>
+                <small style="margin: 5px">{{ day }}</small>
+            </ng-template>
             <div [ngSwitch]="view">
                 <mwl-calendar-month-view *ngSwitchCase="'month'" [viewDate]="viewDate" [events]="events"
-                                         [refresh]="refresh" [activeDayIsOpen]="activeDayIsOpen"
+                                         [refresh]="refresh" [activeDayIsOpen]="activeDayIsOpen" [cellTemplate]="customCellTemplate"
                                          (dayClicked)="dayClicked($event.day)"
                                          (eventClicked)="handleEvent('Clicked', $event.event)"
                                          (eventTimesChanged)="eventTimesChanged($event)">

@@ -1,4 +1,4 @@
-import { Component, OnInit, TemplateRef, ViewChild } from '@angular/core';
+import {ChangeDetectionStrategy, Component, OnInit, TemplateRef, ViewChild} from '@angular/core';
 import {
     startOfDay,
     endOfDay,
@@ -36,6 +36,7 @@ const colors: any = {
 
 @Component({
     selector: 'app-upcoming-events',
+    changeDetection: ChangeDetectionStrategy.OnPush,
     templateUrl: './upcoming-events.component.html'
 })
 export class UpcomingEventsComponent implements OnInit {
@@ -103,6 +104,12 @@ export class UpcomingEventsComponent implements OnInit {
             start: new Date("2018-09-08"),
             end: addDays(new Date("2018-09-08"), 0),
             title: 'Music Concert [Details to be announced]',
+            color: colors.red
+        },
+        {
+            start: new Date("2018-08-18"),
+            end: addDays(new Date("2018-08-18"), 0),
+            title: 'Cuban Music Night',
             color: colors.red
         }
     ];
