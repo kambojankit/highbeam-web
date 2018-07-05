@@ -14,9 +14,9 @@ import { ComponentsComponent } from './components.component';
 import { ServiceComponent } from './service/service.component';
 import { HospitalityComponent } from './hospitality/hospitality.component';
 import { BookingComponent } from './booking/booking.component';
-import { UpcomingEventsComponent } from './upcoming-events/upcoming-events.component';
+// import { UpcomingEventsComponent } from './upcoming-events/upcoming-events.component';
 import { CalendarModule } from 'angular-calendar';
-import { UpcomingEventsService } from './upcoming-events/upcoming-events.service';
+// import { UpcomingEventsService } from './upcoming-events/upcoming-events.service';
 import { ImageComponent } from './image/image.component';
 import { ChooseEventTypeComponent } from './choose-event-type/choose-event.type.component';
 import {Ng2PageScrollModule} from "ng2-page-scroll";
@@ -28,10 +28,14 @@ import {MeetingsComponent} from "./events/meetings/meetings.component";
 import {MusicComponent} from "./events/Music/music.component";
 import {OthersComponent} from "./events/others/others.component";
 import {ContactComponent} from "./contact/contact.component";
+import {CalendarModule as calMod} from "ap-angular2-fullcalendar";
+import {FullCalendarComponent} from "./full-calendar/full-calendar.component";
 
 @NgModule({
     imports: [
         CommonModule,
+        CalendarModule,
+        calMod,
         FormsModule,
         ReactiveFormsModule,
         NgbModule,
@@ -58,14 +62,15 @@ import {ContactComponent} from "./contact/contact.component";
         ServiceComponent,
         HospitalityComponent,
         BookingComponent,
-        UpcomingEventsComponent,
+        // UpcomingEventsComponent,
+        FullCalendarComponent,
         ImageComponent,
         ChooseEventTypeComponent
     ],
     entryComponents: [
         ChooseEventTypeComponent
     ],
-    providers: [UpcomingEventsService],
+    // providers: [UpcomingEventsService],
     exports: [ ComponentsComponent, BookingComponent ]
 })
 export class ComponentsModule { }

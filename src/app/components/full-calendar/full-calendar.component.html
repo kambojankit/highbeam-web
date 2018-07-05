@@ -1,0 +1,19 @@
+<div class="wrapper">
+    <div class="page-header page-header-small">
+        <div class="page-header-image rellax-header" data-rellax-speed="-8"
+             style="background-image: url('assets/img/church/headers/calendar-1.jpeg');">
+        </div>
+        <div class="container">
+            <div class="content-center">
+                <!--<h1 class="title">Events Schedule</h1>-->
+
+            </div>
+        </div>
+    </div>
+    <div class="section section-gallery" id="gallery">
+        <div class="container">
+            <h3 class="title">Upcoming Events</h3>
+            <angular2-fullcalendar [options]="calendarOptions" (initialized)="onCalendarInit($event)"></angular2-fullcalendar>
+        </div>
+    </div>
+</div>

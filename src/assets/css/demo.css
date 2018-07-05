@@ -1,3 +1,5 @@
+@import "fullcalendar/dist/fullcalendar.min.css";
+
 .tim-row {
     margin-bottom: 20px;
 }
@@ -486,4 +488,13 @@
     .section-navbars .navbar-collapse {
         display: none !important;
     }
+}
+
+.fc-day-grid-event > .fc-content {
+    white-space: normal;
+    text-overflow: ellipsis;
+    max-height:20px;
+}
+.fc-day-grid-event > .fc-content:hover {
+    max-height:none!important;
 }

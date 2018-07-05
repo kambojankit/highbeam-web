@@ -1,0 +1,8 @@
+.fc-day-grid-event > .fc-content {
+    white-space: normal;
+    text-overflow: ellipsis;
+    max-height:20px;
+}
+.fc-day-grid-event > .fc-content:hover {
+    max-height:none!important;
+}

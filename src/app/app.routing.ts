@@ -15,10 +15,10 @@ import {CorporateComponent} from "./components/events/corporate/corporate.compon
 import {MeetingsComponent} from "./components/events/meetings/meetings.component";
 import {MusicComponent} from "./components/events/Music/music.component";
 import {OthersComponent} from "./components/events/others/others.component";
-import {UpcomingEventsComponent} from "./components/upcoming-events/upcoming-events.component";
 import {GalleryComponent} from "./components/gallery/gallery.component";
 import {ServiceComponent} from "./components/service/service.component";
 import {ContactComponent} from "./components/contact/contact.component";
+import {FullCalendarComponent} from "./components/full-calendar/full-calendar.component";
 
 const routes: Routes = [
     { path: '', redirectTo: 'index', pathMatch: 'full' },
@@ -31,7 +31,7 @@ const routes: Routes = [
     { path: 'event/art',            component: ArtComponent },
     { path: 'event/celebration',    component: ColComponent },
     { path: 'event/corporate',      component: CorporateComponent},
-    { path: 'event/calendar',       component: UpcomingEventsComponent},
+    { path: 'event/calendar',       component: FullCalendarComponent},
     { path: 'event/meeting',        component: MeetingsComponent },
     { path: 'event/music',          component: MusicComponent},
     { path: 'event/other',          component: OthersComponent},
