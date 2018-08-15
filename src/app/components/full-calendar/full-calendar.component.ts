@@ -79,12 +79,6 @@ export class FullCalendarComponent implements OnInit {
                 end: addDays(new Date("2018-09-08"), 0),
                 title: 'Music Concert [Details to be announced]',
                 timezone:'America/California'
-            },
-            {
-                start: new Date("2018-08-18"),
-                end: addDays(new Date("2018-08-18"), 0),
-                title: 'Cuban Music Night',
-                timezone:'America/California'
             }
         ],
         eventRender: this.eventPopover,
