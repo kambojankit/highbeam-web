@@ -45,39 +45,46 @@ export class FullCalendarComponent implements OnInit {
         },
         events: [
             {
-                start: new Date("2018-06-16"),
+                start: (new Date("2018-06-16")).getUTCDate(),
                 end: addDays(new Date("2018-06-16"), 1),
-                title: 'Music Concert'
+                title: 'Music Concert',
+                timezone:'America/California'
             },
             {
                 start: new Date("2018-07-20"),
                 end: addDays(new Date("2018-07-20"), 2),
-                title: 'Wedding Reception [Private Event]'
+                title: 'Wedding Reception [Private Event]',
+                timezone:'America/California'
             },
             {
                 start: new Date("2018-08-03"),
                 end: addDays(new Date("2018-08-03"), 1),
-                title: 'Vancouver International Mountain Film Festival'
+                title: 'Vancouver International Mountain Film Festival',
+                timezone:'America/California'
             },
             {
                 start: new Date("2018-08-31"),
                 end: addDays(new Date("2018-09-02"), 0),
-                title: 'Wedding Reception [Private Event]'
+                title: 'Wedding Reception [Private Event]',
+                timezone:'America/California'
             },
             {
                 start: new Date("2018-09-07"),
                 end: addDays(new Date("2018-09-07"), 0),
-                title: 'Birthday Party [Private Event]'
+                title: 'Birthday Party [Private Event]',
+                timezone:'America/California'
             },
             {
                 start: new Date("2018-09-08"),
                 end: addDays(new Date("2018-09-08"), 0),
-                title: 'Music Concert [Details to be announced]'
+                title: 'Music Concert [Details to be announced]',
+                timezone:'America/California'
             },
             {
                 start: new Date("2018-08-18"),
                 end: addDays(new Date("2018-08-18"), 0),
-                title: 'Cuban Music Night'
+                title: 'Cuban Music Night',
+                timezone:'America/California'
             }
         ],
         eventRender: this.eventPopover,
