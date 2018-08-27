@@ -16,15 +16,39 @@ import 'rxjs/add/operator/mergeMap';
 import 'rxjs/add/operator/filter';
 import 'rxjs/add/operator/debounceTime';
 import 'rxjs/add/operator/distinctUntilChanged';
+import {addDays} from "date-fns";
 @Injectable()
 export class FullCalendarService {
     constructor(private httpClient: HttpClient) { }
 
-    getEvents(): Observable<CalendarEvent> {
-        const path = 'http://www.json-generator.com/api/json/get/cfRZxLvBrC?indent=2';
+    getEvents(): Observable<any> {
+        // const path = 'http://localhost:8090/schedule/get';
+        const path = 'http://church-api-stg.herokuapp.com/schedule/get';
         return this.httpClient.get(path)
-            .map((events: CalendarEvent[]) => events)
-            .filter(e => false)
+            .map((e:any) =>e)
             .flatMap((event) => event);
     }
+
+    /*
+
+                let data = {
+                    start: new Date("2018-08-28"),
+                    end: addDays(new Date("2018-08-28"), 0),
+                    title: event.title,
+                    timezone:'America/California'
+                };
+     */
+
+    // getEvents(): Observable<any> {
+    //     const path = 'http://church-api-stg.herokuapp.com/schedule/get';
+    //     return this.httpClient.get(path)
+    //         .map((e:any) => {
+    //             return {
+    //                 start: e.startTime,
+    //                 end: e.endTime,
+    //                 title: e.title,
+    //                 url: e.url
+    //             }
+    //         });
+    // }
 }

@@ -1,6 +1,32 @@
-import {ChangeDetectionStrategy, Component, OnInit, TemplateRef, ViewChild} from '@angular/core';
+import {
+    AfterViewInit, ChangeDetectionStrategy, Component, ElementRef, OnInit,
+    ViewChild
+} from '@angular/core';
 import { addDays, addHours } from 'date-fns';
+import { FullCalendarService } from './full-calendar.service';
+import {NgbModal} from "@ng-bootstrap/ng-bootstrap";
+import {CalendarEvent} from "angular-calendar";
+import {Subject} from "rxjs/Subject";
 
+import * as $ from 'jquery';
+window["$"] = $;
+window["jQuery"] = $;
+
+
+const colors: any = {
+    red: {
+        primary: '#ad2121',
+        secondary: '#FAE3E3'
+    },
+    blue: {
+        primary: '#1e90ff',
+        secondary: '#D1E8FF'
+    },
+    yellow: {
+        primary: '#e3bc08',
+        secondary: '#FDF1BA'
+    }
+};
 
 @Component({
     selector: 'app-full-calendar',
@@ -8,10 +34,43 @@ import { addDays, addHours } from 'date-fns';
     styleUrls: ['./full-calendar.component.scss'],
     templateUrl: './full-calendar.component.html'
 })
-export class FullCalendarComponent implements OnInit {
+export class FullCalendarComponent implements OnInit, AfterViewInit {
+    // @ViewChild('angular2-fullcalendar') el:ElementRef;
 
-    ngOnInit(): void {
+    constructor(private fullCalendarService: FullCalendarService) { }
+
+    refresh: Subject<any> = new Subject();
+
+    events  = []
+    ngOnInit() {
+        this.getEvents();
+     }
+
+    ngAfterViewInit(){
+        this.refresh.subscribe( e => {
+            console.log("100ms after ngAfterViewInit ", this.events);
+            $('angular2-fullcalendar').fullCalendar('addEventSource',this.events);
+            $('angular2-fullcalendar').fullCalendar('render');
+        });
     }
+
+
+    getEvents() {
+        this.fullCalendarService.getEvents()
+            .subscribe(e => {
+                console.log('fetching events', e);
+                let data = {
+                    start: new Date(Date.parse(e.startTime)),
+                    end: new Date(Date.parse(e.endTime)),
+                    title: e.title,
+                    url: e.url
+                }
+                this.events.push((data));
+                this.refresh.next();
+            });
+    }
+
+
     calendarOptions:Object = {
         height: 700,
         timeFormat: 'H:mm',
@@ -82,15 +141,19 @@ export class FullCalendarComponent implements OnInit {
             }
         ],
         eventRender: this.eventPopover,
+        eventClick: function(calEvent, jsEvent, view) {
+            window.open(calEvent.url);
+            return false;
+        }
 
     };
 
-    onCalendarInit(initialized: boolean) {
-        console.log('Calendar initialized');
+    onCalendarInit(event: any) {
+        console.log('initialised', event)
     }
 
     eventPopover(event, element) {
-        console.log(element)
+        console.log('poppedOver', event, element)
     }
 
 

@@ -30,6 +30,7 @@ import {OthersComponent} from "./events/others/others.component";
 import {ContactComponent} from "./contact/contact.component";
 import {CalendarModule as calMod} from "ap-angular2-fullcalendar";
 import {FullCalendarComponent} from "./full-calendar/full-calendar.component";
+import {FullCalendarService} from "./full-calendar/full-calendar.service";
 
 @NgModule({
     imports: [
@@ -70,7 +71,7 @@ import {FullCalendarComponent} from "./full-calendar/full-calendar.component";
     entryComponents: [
         ChooseEventTypeComponent
     ],
-    // providers: [UpcomingEventsService],
+    providers: [FullCalendarService],
     exports: [ ComponentsComponent, BookingComponent ]
 })
 export class ComponentsModule { }
