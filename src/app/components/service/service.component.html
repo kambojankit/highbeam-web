@@ -8,101 +8,138 @@
             </div>
         </div>
     </div>
-    <div class="section section-contact-us text-center">
+    <form (ngSubmit)="onSubmit()" #heroForm="ngForm">
+    <div class="section section-contact-us text-center" [hidden]="submitted">
         <div class="container">
             <h2 class="title">Submit details to get a quote!</h2>
             <p class="description">Your project is very important to us.</p>
             <div class="row">
-                <div class="col-lg-6 text-center col-md-8 ml-auto mr-auto" >
-                    <div class="input-group input-lg" >
-                        <div class="input-group-prepend">
-                              <span class="input-group-text">
-                                  <i class="now-ui-icons users_circle-08"></i>
-                              </span>
+
+                    <div class="col-lg-6 text-center col-md-8 ml-auto mr-auto" >
+                        <div class="input-group input-lg" >
+                            <div class="input-group-prepend">
+                                  <span class="input-group-text">
+                                      <i class="now-ui-icons users_circle-08"></i>
+                                  </span>
+                            </div>
+                            <input type="text" class="form-control" placeholder="Contact Name" id="contactName"
+                                   [(ngModel)]="model.contactName" name="contactName"
+                                   #contactName="ngModel">
                         </div>
-                        <input type="text" class="form-control" placeholder="Contact Name">
-                    </div>
-                    <div class="input-group input-lg" >
-                        <div class="input-group-prepend">
-                            <span class="input-group-text">
-                                <i class="now-ui-icons ui-1_email-85"></i>
-                            </span>
+                        <div class="input-group input-lg" >
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">
+                                    <i class="now-ui-icons ui-1_email-85"></i>
+                                </span>
+                            </div>
+                            <input type="text" class="form-control" placeholder="Email Id" id="emailId"
+
+                                   [(ngModel)]="model.emailId" name="emailId"
+                                   #emailId="ngModel">
                         </div>
-                        <input type="text" class="form-control" placeholder="Email Id s">
-                    </div>
-                    <div class="input-group input-lg">
-                        <div class="input-group-prepend">
-                              <span class="input-group-text">
-                                  <i class="now-ui-icons tech_mobile"></i>
-                              </span>
+                        <div class="input-group input-lg">
+                            <div class="input-group-prepend">
+                                  <span class="input-group-text">
+                                      <i class="now-ui-icons tech_mobile"></i>
+                                  </span>
+                            </div>
+                            <input type="text" class="form-control" placeholder="Mobile Number" id="phoneNumber"
+
+                                   [(ngModel)]="model.phoneNumber" name="phoneNumber"
+                                   #phoneNumber="ngModel">
                         </div>
-                        <input type="text" class="form-control" placeholder="Mobile Number">
+
+                        <div class="input-group input-lg">
+                            <div class="input-group-prepend">
+                                  <span class="input-group-text">
+                                      <i class="now-ui-icons clothes_tie-bow"></i>
+                                  </span>
+                            </div>
+                            <input type="text" class="form-control" placeholder="Promotional Name Of Event" id="displayNameOfEvent"
+
+                                   [(ngModel)]="model.displayNameOfEvent" name="displayNameOfEvent"
+                                   #displayNameOfEvent="ngModel">
+                        </div>
+
+                        <div class="input-group input-lg">
+                            <div class="input-group-prepend">
+                                  <span class="input-group-text">
+                                      <i class="now-ui-icons ui-1_calendar-60"></i>
+                                  </span>
+                            </div>
+                            <input type="date" class="form-control" placeholder="Preferred Date (YYYY-MM-DD)" id="preferredEventDate"
+
+                                   [(ngModel)]="model.preferredEventDate" name="preferredEventDate"
+                                   #preferredEventDate="ngModel">
+                        </div>
+
+                        <div class="input-group input-lg">
+                            <div class="input-group-prepend">
+                                  <span class="input-group-text">
+                                      <i class="now-ui-icons tech_watch-time"></i>
+                                  </span>
+                            </div>
+                            <input type="datetime-local" class="form-control" placeholder="Start time" id="startTime"
+
+                                   [(ngModel)]="model.startTime" name="startTime"
+                                   #startTime="ngModel">
+                        </div>
+
+                        <div class="input-group input-lg">
+                            <div class="input-group-prepend">
+                                  <span class="input-group-text">
+                                      <i class="now-ui-icons tech_watch-time"></i>
+                                  </span>
+                            </div>
+                            <!--<input type="datetime-local" class="form-control" placeholder="End time" id="endTime"-->
+
+                                   <!--[(ngModel)]="model.endTime" name="endTime"-->
+                                   <!--#endTime="ngModel">-->
+                            <input class="form-control" placeholder="End time" id="endTime" name="endTime"
+                                   a2e-datetimepicker #endTime="ngModel"
+                                   [(ngModel)]="model.endTime"
+                                   [options]="options"/>
+                        </div>
+
+                        <div class="input-group input-lg">
+                            <div class="input-group-prepend">
+                                  <span class="input-group-text">
+                                      <i class="now-ui-icons transportation_bus-front-12"></i>
+                                  </span>
+                            </div>
+                            <input type="number" class="form-control" placeholder="Number Of Guests" id="guestsCount"
+
+                                   [(ngModel)]="model.guestsCount" name="guestsCount"
+                                   #guestsCount="ngModel">
+                        </div>
+
+                        <div class="input-group input-lg">
+                            <div class="input-group-prepend">
+                                  <span class="input-group-text">
+                                      <i class="now-ui-icons tech_controller-modern"></i>
+                                  </span>
+                            </div>
+                            <input type="text" class="form-control" placeholder="Event Type" id="eventType"
+                                   [(ngModel)]="model.eventType" name="eventType"
+                                   #eventType="ngModel">
+                        </div>
+
+                        <div class="textarea-container">
+                            <textarea class="form-control" name="eventDescription" rows="4" cols="80"
+                                      [(ngModel)]="model.eventDescription" name="eventDescription"
+                                      #eventDescription="ngModel"
+                                      placeholder="Brief description of the event..."></textarea>
+                        </div>
+                        <div class="send-button">
+                            <button type="submit" class="btn btn-primary btn-round btn-block btn-lg" [disabled]="!heroForm.form.valid">Get Quote</button>
+                            <!--<button type="button" class="btn btn-primary btn-round btn-block btn-lg btn-default" (click)="newServiceData(); heroForm.reset()">Reset</button>-->
+                        </div>
                     </div>
 
-                    <div class="input-group input-lg">
-                        <div class="input-group-prepend">
-                              <span class="input-group-text">
-                                  <i class="now-ui-icons clothes_tie-bow"></i>
-                              </span>
-                        </div>
-                        <input type="text" class="form-control" placeholder="Promotional Name Of Event">
-                    </div>
-
-                    <div class="input-group input-lg">
-                        <div class="input-group-prepend">
-                              <span class="input-group-text">
-                                  <i class="now-ui-icons ui-1_calendar-60"></i>
-                              </span>
-                        </div>
-                        <input type="text" class="form-control" placeholder="Preferred Date">
-                    </div>
-
-                    <div class="input-group input-lg">
-                        <div class="input-group-prepend">
-                              <span class="input-group-text">
-                                  <i class="now-ui-icons tech_watch-time"></i>
-                              </span>
-                        </div>
-                        <input type="text" class="form-control" placeholder="Start time">
-                    </div>
-
-                    <div class="input-group input-lg">
-                        <div class="input-group-prepend">
-                              <span class="input-group-text">
-                                  <i class="now-ui-icons tech_watch-time"></i>
-                              </span>
-                        </div>
-                        <input type="text" class="form-control" placeholder="End time">
-                    </div>
-
-                    <div class="input-group input-lg">
-                        <div class="input-group-prepend">
-                              <span class="input-group-text">
-                                  <i class="now-ui-icons transportation_bus-front-12"></i>
-                              </span>
-                        </div>
-                        <input type="text" class="form-control" placeholder="Number Of Guests">
-                    </div>
-
-                    <div class="input-group input-lg">
-                        <div class="input-group-prepend">
-                              <span class="input-group-text">
-                                  <i class="now-ui-icons tech_controller-modern"></i>
-                              </span>
-                        </div>
-                        <input type="text" class="form-control" placeholder="Event Type">
-                    </div>
-
-                    <div class="textarea-container">
-                        <textarea class="form-control" name="name" rows="4" cols="80"
-                                  placeholder="Brief description of the event..."></textarea>
-                    </div>
-                    <div class="send-button">
-                        <a href="#pablo" class="btn btn-primary btn-round btn-block btn-lg">Get Quote</a>
-                    </div>
-                </div>
             </div>
         </div>
     </div>
+    </form>
 
+    {{model | json}}
 </div>

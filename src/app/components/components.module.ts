@@ -17,6 +17,7 @@ import { BookingComponent } from './booking/booking.component';
 // import { UpcomingEventsComponent } from './upcoming-events/upcoming-events.component';
 import { CalendarModule } from 'angular-calendar';
 // import { UpcomingEventsService } from './upcoming-events/upcoming-events.service';
+import {A2Edatetimepicker} from 'ng2-eonasdan-datetimepicker';
 import { ImageComponent } from './image/image.component';
 import { ChooseEventTypeComponent } from './choose-event-type/choose-event.type.component';
 import {Ng2PageScrollModule} from "ng2-page-scroll";
@@ -38,6 +39,7 @@ import {FullCalendarService} from "./full-calendar/full-calendar.service";
         CalendarModule,
         calMod,
         FormsModule,
+        A2Edatetimepicker,
         ReactiveFormsModule,
         NgbModule,
         NouisliderModule,
